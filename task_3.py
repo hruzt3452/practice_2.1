@@ -19,8 +19,8 @@ def read_products(filename):
 def write_products(filename, products):
     with open(filename, 'w', encoding='utf-8', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=FIELDNAMES)
-        writer.writeheader()  # Записываем заголовок таблицы
-        writer.writerows(products)  # Записываем все строки товаров
+        writer.writeheader()
+        writer.writerows(products)
     print(f"Данные успешно сохранены в {filename}")
 
 def add_product(products):
